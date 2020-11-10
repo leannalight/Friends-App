@@ -29,7 +29,9 @@ function checkUrl() {
             let userPhoto = document.querySelector('.profile__image');
             container.textContent = `${data.response[0].first_name} ${data.response[0].last_name}`;
             userPhoto.style.backgroundImage = `url('${data.response[0].photo_200}')`;
+            showFriends(token);
         });
+     showFriends(token);
     }
 }
 
@@ -86,7 +88,8 @@ buttonAuthorisation.addEventListener('click', (event) => {
 buttonExit.addEventListener('click', () => {
     vkLogout();
 });
-
+/*
 buttonFriends.addEventListener('click', () => {
     showFriends(token);
 });
+*/
