@@ -168,11 +168,11 @@
 .friends__title {
     margin-top: 0;
     margin-bottom: 40px;
-    font-size: 20px;
+    font-size: 33px;
     line-height: 1.2;
     font-weight: 900;
     text-align: center;
-    color: #8eda62;
+    color: rgb(68, 87, 173);
 }
 
 @media (max-width: 1000px) {
