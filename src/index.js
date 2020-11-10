@@ -68,6 +68,8 @@ function showFriends(token) {
     sendRequest(`https://api.vk.com/method/friends.search?count=5&fields=photo_100&access_token=${token}&v=5.52`, function(data) {
         console.log(data);
         friendList.render(data.response.items);
+        let container = document.querySelector('.friends__title');
+            container.textContent = 'Мои друзья';
     });
 };
 
