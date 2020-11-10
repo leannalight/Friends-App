@@ -90,6 +90,10 @@
     margin-bottom: 30px;
 }
 
+.button.button_type_friends {
+    margin-bottom: 30px;
+}
+
 .button-text {
     margin: 0;
     font-size: 22px;
