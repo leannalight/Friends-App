@@ -4,11 +4,10 @@ import {
     FriendList
 } from './scripts/Friend.js';
 
-//const buttonFriends = document.querySelector('.button_type_friends');
 const buttonAuthorisation = document.querySelector('.button_type_authorisation');
 const buttonExit = document.querySelector('.button_type_exit');
 const friendContainer = document.querySelector('.friendlist');
-const friendsCounter = document.querySelector('.friends__title');
+//const friendsCounter = document.querySelector('.friends__title');
 const vkRequest = 'https://oauth.vk.com/authorize?client_id=7653662&display=popup&redirect_uri=https://leannalight.github.io/friends-app/&scope=friends,status&response_type=token&v=5.52&state=123456';
 let token;
 let userID;
@@ -87,8 +86,3 @@ buttonAuthorisation.addEventListener('click', (event) => {
 buttonExit.addEventListener('click', () => {
     vkLogout();
 });
-/*
-buttonFriends.addEventListener('click', () => {
-    showFriends(token);
-});
-*/
