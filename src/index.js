@@ -4,7 +4,7 @@ import {
     FriendList
 } from './scripts/Friend.js';
 
-const buttonFriends = document.querySelector('.button_type_friends');
+//const buttonFriends = document.querySelector('.button_type_friends');
 const buttonAuthorisation = document.querySelector('.button_type_authorisation');
 const buttonExit = document.querySelector('.button_type_exit');
 const friendContainer = document.querySelector('.friendlist');
@@ -29,7 +29,6 @@ function checkUrl() {
             let userPhoto = document.querySelector('.profile__image');
             container.textContent = `${data.response[0].first_name} ${data.response[0].last_name}`;
             userPhoto.style.backgroundImage = `url('${data.response[0].photo_200}')`;
-            showFriends(token);
         });
      showFriends(token);
     }
