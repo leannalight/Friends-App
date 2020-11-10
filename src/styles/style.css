@@ -82,6 +82,10 @@
     text-decoration: none;
 }
 
+.button_hidden {
+    display: none;
+}
+
 .button:hover {
     background-color: rgba(68, 87, 173, 0.7);
 }
@@ -164,10 +168,11 @@
 .friends__title {
     margin-top: 0;
     margin-bottom: 40px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.2;
     font-weight: 900;
     text-align: center;
+    color: #8eda62;
 }
 
 @media (max-width: 1000px) {

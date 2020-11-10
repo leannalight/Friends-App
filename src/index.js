@@ -24,8 +24,10 @@ function checkUrl() {
         sendRequest(`https://api.vk.com/method/users.get?fields=photo_200&user_id=${userID}&access_token=${token}&v=5.52`, function(data) {
             let container = document.querySelector('.profile__name');
             let userPhoto = document.querySelector('.profile__image');
+            let buttonElem = document.querySelector('.button_type_exit');
             container.textContent = `${data.response[0].first_name} ${data.response[0].last_name}`;
             userPhoto.style.backgroundImage = `url('${data.response[0].photo_200}')`;
+            buttonElem.classList.remove('button_hidden');
         });
 
      showFriends(token);
