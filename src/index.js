@@ -37,6 +37,7 @@ function checkUrl() {
 
 
 checkUrl();
+vkLoggedIn();
 
 function sendRequest(url, foo) {
     return $.ajax({
@@ -56,12 +57,25 @@ function getToken() {
     let hashUserID = window.location.hash.match(regexpUserID);
     token = hashToken.join('').slice(14, -1);
     userID = hashUserID.join('').slice(8, -1);
-    
+
     const { token } = res.json();
     console.log('got token', token);
     localStorage.setItem('token', token);
     return token, userID;
  
+}
+
+function vkLoggedIn() {
+    VK.Auth.getLoginStatus(function(response) {
+        if (response.status == 'connected') {
+            VK.Auth.login(function() {
+                window.location = vkRequest;
+                let buttonElem = document.querySelector('.button_type_authorisation');
+                buttonElem.classList.add('button_hidden');  
+            });
+
+        }
+    });
 }
 
 function vkLogout() {
