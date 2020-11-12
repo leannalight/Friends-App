@@ -32,12 +32,12 @@ function checkUrl() {
         });
         
      showFriends(token);
+     vkLoggedIn();
     }
 }
 
 
 checkUrl();
-vkLoggedIn();
 
 function sendRequest(url, foo) {
     return $.ajax({
