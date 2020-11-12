@@ -32,7 +32,6 @@ function checkUrl() {
         });
         
      showFriends(token);
-     vkLoggedIn();
     }
 }
 
@@ -63,19 +62,6 @@ function getToken() {
     localStorage.setItem('token', token);
     return token, userID;
  
-}
-
-function vkLoggedIn() {
-    VK.Auth.getLoginStatus(function(response) {
-        if (response.status == 'connected') {
-            VK.Auth.login(function() {
-                window.location = vkRequest;
-                let buttonElem = document.querySelector('.button_type_authorisation');
-                buttonElem.classList.add('button_hidden');  
-            });
-
-        }
-    });
 }
 
 function vkLogout() {
