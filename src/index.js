@@ -35,7 +35,6 @@ function checkUrl() {
     }
 }
 
-
 checkUrl();
 
 function sendRequest(url, foo) {
@@ -56,11 +55,11 @@ function getToken() {
     let hashUserID = window.location.hash.match(regexpUserID);
     token = hashToken.join('').slice(14, -1);
     userID = hashUserID.join('').slice(8, -1);
-
+/*
     const { token } = res.json();
     console.log('got token', token);
     localStorage.setItem('token', token);
-    return token, userID;
+    return token, userID; */
  
 }
 
