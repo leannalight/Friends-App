@@ -1,23 +1,16 @@
 # friends-app
 vk authorisation
 
-[Ссылка на приложение](https://leannalight.github.io/friends-app/)
+ [Тестовый проект] (https://leannalight.github.io/friends-app/) - веб приложение. При открытии показывает кнопку «авторизоваться» - по нажатию делает oauth авторизацию ВКонтакте, и показывает имя авторизованного пользователя и 5 любых друзей пользователя. Авторизация запоминается. Верстка адаптивная.
 
-### Тестовый проект - веб приложение. При открытии показывает кнопку «авторизоваться» - по нажатию делает oauth авторизацию ВКонтакте, и показывает имя авторизованного пользователя и 5 любых друзей пользователя. Авторизация запоминается. Верстка адаптивная.
+### Установка
+ - ```git clone https://github.com/leannalight/friends-app.git```
+ - ```npm install```
+ - ```npm run built``` сборка продакшн
+ - ```npm run dev``` запуск с хот-релоуд
+- ```npm run deploy``` опубликует в gh-pages
 
-### Инструкции по установке
- ```git clone https://github.com/leannalight/friends-app.git``` склонирует репозиторий 
- ```npm install``` становите зависимости 
- ```npm run built``` запускает сборку продакшн
- ```npm run dev``` запускает сборку проекта локально
- ```npm run deploy``` опубликует в gh-pages
-
-## Технологии
-- CSS
-- HTML
-- BEM
-- JavaScript
-- Webpack
-- JQuery
+### Стек
+- CSS, HTML, BEM, JavaScript, Webpack, JQuery
 
 

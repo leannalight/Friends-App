@@ -16,6 +16,10 @@ const friendList = new FriendList({
     blockName: 'friendlist'
 });
 
+// localStorage.setItem('', JSON.stringify());
+//const data = JSON.parse(localStorage.getItem('items'));
+
+
 function checkUrl() {
     let regexpToken = /(#access_token=)([a-z0-9]+)\&/g;
 
@@ -30,7 +34,7 @@ function checkUrl() {
             userPhoto.style.backgroundImage = `url('${data.response[0].photo_200}')`;
             buttonElem.classList.remove('button_hidden');  
         });
-        
+    
      showFriends(token);
     }
 }
@@ -55,11 +59,6 @@ function getToken() {
     let hashUserID = window.location.hash.match(regexpUserID);
     token = hashToken.join('').slice(14, -1);
     userID = hashUserID.join('').slice(8, -1);
-/*
-    const { token } = res.json();
-    console.log('got token', token);
-    localStorage.setItem('token', token);
-    return token, userID; */
  
 }
 
@@ -85,8 +84,11 @@ function showFriends(token) {
 buttonAuthorisation.addEventListener('click', (event) => {
     event.preventDefault();
     window.location = vkRequest;
+
+    localStorage.setItem('', JSON.stringify());
 });
 
 buttonExit.addEventListener('click', () => {
+    localStorage.clear();
     vkLogout();
 });
